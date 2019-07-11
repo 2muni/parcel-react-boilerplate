@@ -6,7 +6,7 @@ import Search from './Search';
 const AppRouter = () => (
   <Switch>
     <Route exact path="/" component={Intro} />
-    <Route exact path="/search" component={Search} />
+    <Route path="/search" component={Search} />
     <Redirect from="*" to="/" />
   </Switch>
 );

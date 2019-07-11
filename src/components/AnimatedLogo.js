@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { Logo } from './Icons';
 
 const Animation = keyframes`
-from {
+  from {
     transform: rotate(0deg);
   }
   to {
@@ -14,7 +14,6 @@ from {
 
 const Container = styled.div`
   animation: ${Animation} infinite 20s linear;
-  width: 100%;
   text-align: center;
   pointer-events: none;
 `;

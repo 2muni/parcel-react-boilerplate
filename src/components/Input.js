@@ -5,13 +5,14 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   border: ${props => props.theme.boxBorder};
+  width: 100%;
   background-color: white;
   border-radius: ${props => props.theme.borderRadius};
-  padding: 10px 15px;
+  padding: 7px 12px;
 `;
 const Text = styled.input`
   border: none;
-  font-size: 24px;
+  font-size: ${props => props.size}px;
   flex: 1;
 `;
 const IconButton = styled.button`
@@ -27,21 +28,26 @@ const Input = ({
   value,
   onChange,
   type = 'text',
-  Icon,
-}) => (
-  <Container>
-    <Text
-      placeholder={placeholder}
-      required={required}
-      value={value}
-      onChange={onChange}
-      type={type}
-    />
-    <IconButton>
-      <Icon />
-    </IconButton>
-  </Container>
-);
+  size = 24,
+  icon,
+}) => {
+  const Icon = icon;
+  return (
+    <Container>
+      <Text
+        placeholder={placeholder}
+        required={required}
+        value={value}
+        onChange={onChange}
+        size={size}
+        type={type}
+      />
+      <IconButton>
+        <Icon />
+      </IconButton>
+    </Container>
+  );
+};
 
 Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
@@ -49,7 +55,8 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   type: PropTypes.string,
-  Icon: PropTypes.func,
+  size: PropTypes.number,
+  icon: PropTypes.func,
 };
 
 export default Input;

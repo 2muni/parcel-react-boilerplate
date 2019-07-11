@@ -3,8 +3,9 @@ const BORDER_RADIUS = '4px';
 
 export default {
   maxWidth: '935px',
-  bgColor: '#282c34',
+  bgColor: '#fafafa',
   blueColor: '#61dafb;',
+  darkGreyColor: '#282c34',
   emphSize: '36px',
   boxBorder: `${BOX_BORDER}`,
   borderRadius: `${BORDER_RADIUS}`,

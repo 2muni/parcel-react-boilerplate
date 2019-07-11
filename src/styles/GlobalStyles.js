@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
   body {
     background-color:${props => props.theme.bgColor};
-    color: white;
+    color: ${props => props.theme.darkGrayColor};
     font-size:14px;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
